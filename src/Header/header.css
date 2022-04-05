@@ -1,0 +1,31 @@
+.Navbar{
+    
+    border : 1px black solid ;
+    text-align: center;
+    display: flex; 
+
+    
+}
+.Navbar-Item{
+      
+    border : 2px blueviolet solid ;
+    display: flex; 
+    justify-content:center;
+    background-image: url("");
+    
+    background-size: cover;
+  
+}
+.Item1{
+    border : 1px black solid ;
+    display: flex; 
+    
+}
+.Item2{
+    border : 1px black solid ;
+    display: flex; 
+}
+.Item3{
+    border : 1px black solid ; 
+    display: flex; 
+}
