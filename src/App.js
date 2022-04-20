@@ -12,6 +12,7 @@ Amplify.configure(awsExports);
 const initialState = { name: '', description: '' }
 
 const App = () => {
+  <Header/>
   const [formState, setFormState] = useState(initialState)
   const [todos, setTodos] = useState([])
 
@@ -44,11 +45,12 @@ const App = () => {
   }
 
   return (
+    
    
       <Authenticator>
         {({ signOut, user }) => (
           <div style={styles.container}>
-            <h1>Hello {user.username}</h1>
+            <h1>Hello: {user.username}</h1>
             <button style={styles.button} onClick={signOut}>Sign out</button>
             <br />
             <h2>Amplify Todos</h2>
