@@ -12,7 +12,8 @@ Amplify.configure(awsExports);
 const initialState = { name: '', description: '' }
 
 const App = () => {
-  <Header/>
+
+  
   const [formState, setFormState] = useState(initialState)
   const [todos, setTodos] = useState([])
 
@@ -46,27 +47,30 @@ const App = () => {
 
   return (
     
-   
+    
       <Authenticator>
+          
         {({ signOut, user }) => (
+          
           <div style={styles.container}>
-            <h1>Hello: {user.username}</h1>
-            <button style={styles.button} onClick={signOut}>Sign out</button>
+          <Header/>
+            <h1>Bienvenido: {user.username}</h1>
+            <button style={styles.button} onClick={signOut}>Cerrar sesion</button>
             <br />
             <h2>Amplify Todos</h2>
             <input
               onChange={event => setInput('name', event.target.value)}
               style={styles.input}
               value={formState.name}
-              placeholder="Name"
+              placeholder="Nombre"
             />
             <input
               onChange={event => setInput('description', event.target.value)}
               style={styles.input}
               value={formState.description}
-              placeholder="Description"
+              placeholder="Descripción"
             />
-            <button style={styles.button} onClick={addTodo}>Create Todo</button>
+            <button style={styles.button} onClick={addTodo}>Crear Todo</button>
             {
               todos.map((todo, index) => (
                 <div key={todo.id ? todo.id : index} style={styles.todo}>
@@ -77,7 +81,9 @@ const App = () => {
             }
           </div>
         )}
+       
       </Authenticator>
+      
     );
 }
 
